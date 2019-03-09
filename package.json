@@ -4,9 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "test": "yarn lint && yarn test",
+    "test": "yarn lint && yarn jest",
     "lint": "eslint ."
-    
   },
   "repository": {
     "type": "git",
