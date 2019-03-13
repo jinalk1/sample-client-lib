@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "@sb-digital/psd2-ob-account-api",
+  "version": "1.0.0",
+  "description": "Account Api for PSD2",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "yarn lint && yarn jest",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinalk1/sample-client-lib.git"
+  },
+  "author": "sb-digital",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jinalk1/sample-client-lib/issues"
+  },
+  "homepage": "https://github.com/jinalk1/sample-client-lib#readme",
+  "dependencies": {
+    "axios": "^0.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.15.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "jest": "^24.4.0",
+    "prettier": "^1.16.4"
+  }
+}
