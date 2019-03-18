@@ -1,6 +1,6 @@
 'use strict';
 
-const mockdata = require('../test/unit/clients/mockdata')
+const mockdata = require('../test/clients/mockdata')
 
 const axios = jest.genMockFromModule('axios')
 

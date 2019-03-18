@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "@sb-digital/psd2-ob-account-api",
+  "name": "@sb-digital/tsys-client",
   "version": "1.0.0",
-  "description": "Account Api for PSD2",
+  "description": "Client for accessing TSYS API's",
   "main": "index.js",
   "directories": {
     "test": "test"

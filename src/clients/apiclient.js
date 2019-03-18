@@ -11,11 +11,14 @@ const getClient = (baseUrl = null) => {
 };
 
 module.exports = {
+
   TsysClient: class ApiClient {
+
     constructor(baseUrl = null) {
       this.client = getClient(baseUrl);
     }
 
+    
     get(url, conf = {}) {
       return this.client
         .get(url, conf)
@@ -24,60 +27,46 @@ module.exports = {
     }
 
     getAccountInfo(accountId, conf = {}) {
-      return this.get(accountId, conf)
+
+      return this.get("account/"+accountId, conf)
         .then(response => response)
         .catch(error => error);
     }
 
     getCreditLimit(accountId, conf={}) {
-      
       return this
         .get(accountId)
         .then(response => response)
         .catch(error => error);
-    },
-
-
-    getClient() {
-      return this.client;
     }
-  },
 
-  get: url => {
-    return axios
-      .get(url)
-      .then(response => response)
-      .catch(error => error);
-  },
+    getCustomerRelationship(accountId, customerId, conf={}) {
+      return this
+        .get(accountId,conf)
+        .then(response => response)
+        .catch(error => error);
+    }
 
+    getBillingCycle(accountId, conf={})  {
+      return this
+        .get(accountId, conf)
+        .then(response => response)
+        .catch(error => error);
+    }
 
+    getTransactionCycle(accountId, conf={}) {
+      return this
+        .get(accountId,conf)
+        .then(response => response)
+        .catch(error => error);
+    }
 
-
-  getCustomerRelationship: (accountId, customerId) => {
-    return axios
-      .get(accountId)
-      .then(response => response)
-      .catch(error => error);
-  },
-
-  getBillingCycle: accountId => {
-    return axios
-      .get(accountId)
-      .then(response => response)
-      .catch(error => error);
-  },
-
-  getTransactionCycle: accountId => {
-    return axios
-      .get(accountId)
-      .then(response => response)
-      .catch(error => error);
-  },
-
-  getTransactionCurrent: accountId => {
-    return axios
-      .get(accountId)
-      .then(response => response)
-      .catch(error => error);
+    getTransactionCurrent(accountId, conf={})  {
+      return this
+        .get(accountId, conf)
+        .then(response => response)
+        .catch(error => error);
+    }
   }
+
 };
