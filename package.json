@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "yarn lint && yarn jest",
+    "test": " yarn jest",
     "lint": "eslint ."
   },
   "repository": {
